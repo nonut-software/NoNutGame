@@ -13,7 +13,7 @@ public class Playerstats : MonoBehaviour
     public float collisionTime;
     public Text money;
     public Text helth;
-    public TMP_Text scoretext;
+    public Text scoretext;
    
 
     // Update is called once per frame
@@ -23,8 +23,8 @@ public class Playerstats : MonoBehaviour
         {
             SceneManager.LoadScene("MenuScene");
         }
-        money.text = "sordi " + sordi;
-        helth.text = "helth " + health.ToString("F0");
+        money.text = "Sordi " + sordi;
+        helth.text = "Helth " + health.ToString("F0");
         scoretext.text = "Score: " + score;
         if (health <= 0)
         {
@@ -52,6 +52,6 @@ public class Playerstats : MonoBehaviour
     }
     void GameOver()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

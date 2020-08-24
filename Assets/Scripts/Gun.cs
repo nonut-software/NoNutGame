@@ -46,6 +46,10 @@ public class Gun : MonoBehaviour
             {
                 controller.IncDamage();
             }
+            if (hit.transform.name.Equals("HealthButton"))
+            {
+                controller.IncHealth();
+            }
 
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)

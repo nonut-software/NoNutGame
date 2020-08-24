@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1023,6 +1023,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 741643397}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &415435249
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415435248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a58d1639780506c4f82f7c2317456aef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &415435250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1063,7 @@ MonoBehaviour:
   impactEffect: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
     type: 3}
   controller: {fileID: 2021208739}
+  gunanim: {fileID: 415435249}
 --- !u!1 &642468878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1395,14 @@ PrefabInstance:
     - target: {fileID: 1690370004738036, guid: f2b3bff7c9d735441b445bb19a2fe9cc, type: 3}
       propertyPath: m_Name
       value: Handgun_M1911A_Steel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366570455463556, guid: f2b3bff7c9d735441b445bb19a2fe9cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.32133484
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366570455463556, guid: f2b3bff7c9d735441b445bb19a2fe9cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.83021e-10
       objectReference: {fileID: 0}
     - target: {fileID: 4878850369403266, guid: f2b3bff7c9d735441b445bb19a2fe9cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2775,7 +2803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clips:
   - Name: Gunshot
-    Clip: {fileID: 8300000, guid: b8cd4870fcda1a44daef67550c5dcf27, type: 3}
+    Clip: {fileID: 8300000, guid: e1a7cbe7e95e70847823506888efb0df, type: 3}
     Volume: 1
     Pitch: 0.4
     Loop: 0

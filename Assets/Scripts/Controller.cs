@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
     public float speedCost;
     public float fireRateCost;
     public float damageCost;
+    public float healthCost;
     Playerstats money;
     private void Start()
     {
@@ -36,6 +37,17 @@ public class Controller : MonoBehaviour
         {
             money.AddMoney(-fireRateCost);
             gun.fireRate++;
+        }
+    }
+
+    public void IncHealth()
+    {
+        if (money.GetMoney() >= healthCost)
+        {
+            money.AddMoney(-healthCost);
+            money.health = money.health + 50;
+            if (money.health > 100)
+                money.health = 100;
         }
     }
 

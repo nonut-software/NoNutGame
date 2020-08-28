@@ -12,20 +12,24 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public Controller controller;
+    public Animator gunanim;
 
     private float nextTimeToFire = 0f;
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            
         }
 
     }
     void Shoot()
     {
+        gunanim.SetTrigger("fire");
         FindObjectOfType<AudioManager>().Play("Gunshot");
         muzzleFlash.Play();
         RaycastHit hit;
@@ -41,6 +45,10 @@ public class Gun : MonoBehaviour
             if (hit.transform.name.Equals("DamageButton"))
             {
                 controller.IncDamage();
+            }
+            if (hit.transform.name.Equals("HealthButton"))
+            {
+                controller.IncHealth();
             }
 
             Target target = hit.transform.GetComponent<Target>();
